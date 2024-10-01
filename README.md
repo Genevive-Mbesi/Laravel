@@ -7,6 +7,26 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 - User authentication with JWT
 - Secure product retrieval
 - Well-structured codebase following best practices
+- 
+### MySQL Configuration
+#### Set Up MySQL Database
+#### Create a new MySQL database: You can create a database for your Laravel application using the following SQL command:
+
+#### sql
+#### Copy code
+    CREATE DATABASE laravel_api;
+    
+#### MySQL Configuration in .env: After setting up your MySQL database, update the .env file with your MySQL credentials. Ensure the following lines are correctly configured:
+
+#### bash
+#### Copy code
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=tech
+    DB_USERNAME=your_mysql_username
+    DB_PASSWORD=your_mysql_password
 
 ## API Endpoints
 
@@ -28,9 +48,9 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 - **Description:**: Retrieves a list Customers.
 - **Headers:**:
 - **Authorization:**: Bearer your_jwt_token
-- - **Request Body:**
-```json
- 
+- **Request Body:**
+  ```json
+
     {
         "id": 1,
         "name": "customer",
@@ -39,13 +59,14 @@ This project is a RESTful API built with Laravel that provides endpoints for use
         "created_at": "2024-10-01T05:37:59.000000Z",
         "updated_at": "2024-10-01T05:37:59.000000Z"
     }
+
 #### Products
 #### Retrieve Products
 - **Endpoint:**: GET /api/products
 - **Description:**: Retrieves a list of all available products.
 - **Request Body:**
-```json
- 
+    ```json
+  
     {
         "id": 1,
         "name": "Product 1",
@@ -62,29 +83,31 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 ### Installation
 #### Clone the repository:
 #### bash
-#### Copy code
-git clone https://github.com/Genevive-Mbesi/laravel.git
+#### Copy code   
+
+    git clone https://github.com/Genevive-Mbesi/laravel.git
+
 #### Navigate to the project directory:
 #### bash
 #### Copy code
-cd laravel
+    cd laravel
 ##### Install dependencies:
 #### bash
 #### Copy code
-composer install
+    composer install
 #### Set up your .env file:
 #### bash
 #### Copy code
-cp .env.example .env
+    cp .env.example .env
 #### Generate an application key:
-#### #### bash
-Copy code
-php artisan key:generate
+#### bash
+#### Copy code
+        php artisan key:generate
 #### Run migrations to set up the database:
 #### bash
 #### Copy code
-php artisan migrate
+       php artisan migrate
 #### Start the development server:
 #### bash
 #### Copy code
-php artisan serve
+     php artisan serve
