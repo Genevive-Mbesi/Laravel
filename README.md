@@ -29,6 +29,7 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 - **Headers:**:
 - **Authorization:**: Bearer your_jwt_token
 - - **Request Body:**
+```json
  [
     {
         "id": 1,
@@ -44,6 +45,7 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 - **Endpoint:**: GET /api/products
 - **Description:**: Retrieves a list of all available products.
 - **Request Body:**
+```json
  [
     {
         "id": 1,
