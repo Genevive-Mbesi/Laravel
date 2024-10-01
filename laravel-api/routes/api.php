@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,4 +29,6 @@ Route::middleware(['auth:api'])->group(function () {
 });
 
 Route::get('/customers', [CustomerController::class, 'index']);
+
+Route::get('/products', [ProductController::class, 'index']);
 

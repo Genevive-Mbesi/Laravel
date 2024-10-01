@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Database\Seeders\ProductSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        
+
         if (!User::where('email', 'gennymbesi@gmail.com')->exists()) {
             // If the user doesn't exist, create it
             User::create([
@@ -24,5 +25,7 @@ class DatabaseSeeder extends Seeder
 
         // Call the CustomerSeeder to seed customers
         $this->call(CustomerSeeder::class);
+        $this->call(ProductSeeder::class);
     }
+
 }
