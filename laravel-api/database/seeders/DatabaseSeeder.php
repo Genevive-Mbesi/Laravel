@@ -12,11 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create a user with the provided email and password
-        User::create([
-            'name' => 'user',
-            'email' => 'gennymbesi@gmail.com',
-            'password' => bcrypt('password123'), 
-        ]);
+        
+        if (!User::where('email', 'gennymbesi@gmail.com')->exists()) {
+            // If the user doesn't exist, create it
+            User::create([
+                'name' => 'user',
+                'email' => 'gennymbesi@gmail.com',
+                'password' => bcrypt('password123'),
+            ]);
+        }
+
+        // Call the CustomerSeeder to seed customers
+        $this->call(CustomerSeeder::class);
     }
 }

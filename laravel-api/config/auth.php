@@ -89,6 +89,11 @@ return [
     | quickly generating a very large amount of password reset tokens.
     |
     */
+    'api' => [
+    'driver' => 'jwt',
+    'provider' => 'users',
+],
+
 
     'passwords' => [
         'users' => [
