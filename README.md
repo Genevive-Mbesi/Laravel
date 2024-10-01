@@ -5,9 +5,9 @@ This project is a RESTful API built with Laravel that provides endpoints for use
 
 ## Features
 - User authentication with JWT
-- Secure product retrieval
+- Secure product and customer end points retrieval
 - Well-structured codebase following best practices
-- 
+  
 ### MySQL Configuration
 #### Set Up MySQL Database
 #### Create a new MySQL database: You can create a database for your Laravel application using the following SQL command:
