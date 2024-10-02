@@ -11,13 +11,13 @@ class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
-    // Add this method
+    
     public function getJWTIdentifier()
     {
         return $this->getKey();
     }
 
-    // Add this method
+
     public function getJWTCustomClaims()
     {
         return [];

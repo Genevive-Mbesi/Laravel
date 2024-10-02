@@ -12,9 +12,8 @@ class CustomerSeeder extends Seeder
      */
     public function run(): void
     {
-        // Check if the customer already exists
+        
         if (!Customer::where('email', 'customer@gmail.com')->exists()) {
-            // If the customer doesn't exist, create it
             Customer::create([
                 'name' => 'customer',
                 'email' => 'customer@gmail.com',
@@ -22,6 +21,13 @@ class CustomerSeeder extends Seeder
             ]);
         }
 
-        // Add more customers as needed, following the same pattern
+
+        if (!Customer::where('email', 'mbesi@gmail.com')->exists()) {
+            Customer::create([
+                'name' => 'mbesi',
+                'email' => 'mbesi@gmail.com',
+                'phone_number' => '12345',
+            ]);
+        }
     }
 }

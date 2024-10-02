@@ -23,7 +23,7 @@ class AddDescriptionAndPriceToProductsTable extends Migration
     public function down(): void
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn(['description', 'priceInCents']); // Drop the columns if needed
+            $table->dropColumn(['description', 'priceInCents']); 
         });
     }
 }
