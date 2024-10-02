@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Add this route for JWT-based login
+// route for JWT-based login
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware(['auth:api'])->group(function () {
